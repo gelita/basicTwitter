@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="safety_array">
+        <item>""</item>
+        <item>active</item>
+        <item>moderate</item>
+        <item>off</item>
+    </string-array>    
+</resources>
