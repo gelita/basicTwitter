@@ -20,7 +20,7 @@ Type (faces, photo, clip art, line art)
 Safe Search (off, moderate, active)
 Subsequent searches will have any filters applied to the search results
 User can tap on any image in results to see the image full-screen
-User can scroll down “infinitely” to continue loading more image results (up to 8 pages)
+User can scroll down “infinitely” to continue loading more image results
 
 Walkthrough of all user stories:
 
