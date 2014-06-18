@@ -1,4 +1,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
+      <item
+        android:id="@+id/miReset"
+        android:icon="@drawable/ic_reset"
+        android:showAsAction="always"
+        android:onClick="onReset"
+        android:title="@string/reset">
+    </item> 
     <item
         android:id="@+id/miFilters"
         android:icon="@drawable/ic_gear"

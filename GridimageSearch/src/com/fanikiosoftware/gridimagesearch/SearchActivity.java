@@ -53,15 +53,17 @@ public class SearchActivity extends Activity {
 			}
 		});
 
-		gvResults.setOnScrollListener(new EndlessScrollListener() {
+		gvResults.setOnScrollListener(new EndlessScrollListener(){
 			@Override
 			public void onLoadMore(int page, int totalItemsCount) {	            
 				String query = etQuery.getText().toString();			
 				//check if search is valid data
-				if( query!= null && !query.isEmpty()){
+				if(query.length() == 0) {
+					etQuery.setError("Please enter a search term.");
+				}else{					
 					AsyncHttpClient client = new AsyncHttpClient();		
 					client.get("https://ajax.googleapis.com/ajax/services/search/images?rsz=8&imgcolor="
-							+ color + "&imgtype=" + type + "&safe=" + safety + "&start=" + page++ + "&v=1.0&q=" + Uri.encode(query),	
+							+ color + "&imgtype=" + type + "&safe=" + safety + "&start=" + page + "&v=1.0&q=" + Uri.encode(query),	
 							new JsonHttpResponseHandler(){
 								@Override
 								public void onSuccess(JSONObject response){
@@ -72,6 +74,7 @@ public class SearchActivity extends Activity {
 												.getJSONArray("results");										
 										//loads into grid/array and notifies adapter
 										imageAdapter.addAll(ImageResult.fromJSONArray(imageJsonResults));
+
 										Log.d("DEBUG", imageResults.toString());					
 									}catch (JSONException e){
 										e.printStackTrace();								
@@ -83,7 +86,8 @@ public class SearchActivity extends Activity {
 								}
 
 							});
-				}
+				}				
+				return;				
 			}
 		});
 	}
@@ -112,7 +116,7 @@ public class SearchActivity extends Activity {
 									//loads into grid/array and notifies adapter
 									imageAdapter.addAll(ImageResult.fromJSONArray(imageJsonResults));
 									Log.d("DEBUG", imageResults.toString());
-									
+
 								}catch (JSONException e){
 									e.printStackTrace();								
 								}
@@ -151,4 +155,12 @@ public class SearchActivity extends Activity {
 			safety = data.getExtras().getString("safety");
 		}
 	} 
+
+	public void onReset(MenuItem mi){
+		color="";
+		type ="";
+		safety="";
+		etQuery.setText("");
+		imageAdapter.clear();
+	}
 }
