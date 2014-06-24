@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 grid-image-search
 =================
 
@@ -31,3 +32,9 @@ Walkthrough of all user stories:
 
 
 <img alt src="/gifGridImageSearch.gif" />
+=======
+SimpleTwitter
+=============
+
+simple client for android
+>>>>>>> 32ce26d5cc174d60d317a9abf8e0ecb03d6bbe78
