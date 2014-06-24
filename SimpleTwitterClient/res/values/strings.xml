@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Basic Twitter</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_photos"> Photos</string>
+    <string name="login_label">Connect to Twitter</string>
+    <string name="title_activity_timeline">Home</string>
+    <string name="label_screenName">\@TwitterUser</string>
+    <string name="tvBodyText">This is a tweet.</string>
+    <string name="profileImageDesc">twitter user profile image</string>
+    <string name="desc">twitter logo</string>
+    <string name="compose">Tweet</string>
+    <string name="title_menu_main">Tweet</string>
+    <string name="title_activity_compose_tweet">Tweet!</string>
+    <string name="tweet">Tweet!</string>
+    <string name="hint_compose_tweet">What\'s happening? </string>
+    <string name="label_name">User Name</string>
+    <string name="cancel">Cancel</string>
+</resources>

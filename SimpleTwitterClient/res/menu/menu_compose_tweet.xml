@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >    
+    <item
+        android:id="@+id/miPostTweet"
+        android:icon="@drawable/ic_posttweet"
+        android:showAsAction="always"
+        android:onClick="onPostTweet"
+        android:title="@string/tweet">
+    </item> 
+     <item
+        android:id="@+id/miCancelTweet"
+        android:icon="@drawable/ic_trash"
+        android:showAsAction="always"
+        android:onClick="onCancelTweet"
+        android:title="@string/cancel">
+    </item> 
+</menu>
